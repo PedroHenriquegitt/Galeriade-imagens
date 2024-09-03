@@ -1,0 +1,122 @@
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   height: 100vh;
+background-image: url(./img/scattered-forcefields.svg);
+}
+
+
+h1 {
+   font-size: 45px;
+   text-transform: uppercase;
+   text-align: center;
+   font-family: monospace;
+   color: black;
+}
+
+.galeria {
+   width: 400px;
+   height: 400px;
+   position: relative;
+   border: solid 10px black;
+}
+
+.Galeria-item {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 25px 50px;
+   opacity: 0;
+   transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+   border: solid 10px black;
+   border-width: 0 6px 6px 0;
+   padding: 20px;
+   
+}
+
+.prev {
+   top: 50%;
+   left: -45%;
+   position: absolute;
+   transform: translateY(-50%) rotate(135deg);
+}
+
+.next {
+   top: 50%;
+   right: -45%;
+   position: absolute;
+   transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="item"] {
+   display: none;
+}
+
+.item-1 {
+   z-index: 2;
+   opacity: 1;
+   background: url(./img/pexels-mareefe-672101.jpg);
+   background-size: cover;
+}
+
+.item-2 {
+   background: url(./img/pexels-pixabay-161559\ \(1\).jpg);
+   background-size: cover;
+}
+
+.item-3 {
+   background: url(./img/pexels-psco-189268.jpg);
+   background-size: cover;
+}
+
+*:target~.item-1 {
+   opacity: 1;
+}
+
+#item-2:target~.item-2,
+#item-3:target~.item-3 {
+   z-index: 3;
+   opacity: 1;
+}
+
+/* Adicionado responsividade */
+
+@media screen and (max-width: 500px) {
+   .galeria {
+       width: 340px;
+       height: 340px;
+   }
+
+   h1 {
+       font-size: 30px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .galeria {
+       width: 320px;
+       height: 320px;
+   }
+
+   h1 {
+       font-size: 28px;
+   }
+}
+
+@media screen and (max-width: 350px) {
+   .galeria {
+       width: 280px;
+       height: 280px;
+   }
+
+   h1 {
+       font-size: 25px;
+   }
+}
