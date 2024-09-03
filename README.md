@@ -1,7 +1,5 @@
-# Galeria de imagens
+
 https://galeriadeimagenss.netlify.app/
-
-
 
 <br clear="both">
 
