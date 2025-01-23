@@ -86,37 +86,32 @@ h1 {
    opacity: 1;
 }
 
-/* Adicionado responsividade */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
    .galeria {
-       width: 340px;
-       height: 340px;
+       width: 350px;
+       height: 350px;
    }
 
    h1 {
-       font-size: 30px;
-   }
-}
-
-@media screen and (max-width: 400px) {
-   .galeria {
-       width: 320px;
-       height: 320px;
+       font-size: 36px;
    }
 
-   h1 {
-       font-size: 28px;
-   }
-}
-
-@media screen and (max-width: 350px) {
-   .galeria {
-       width: 280px;
-       height: 280px;
+   .arrow {
+       padding: 15px;
    }
 
-   h1 {
-       font-size: 25px;
+   .prev, .next {
+       top: 50%;
+       position: absolute;
+       transform: translateY(-50%) rotate(135deg);
+   }
+
+   .prev {
+       left: -40%;
+   }
+
+   .next {
+       right: -40%;
    }
 }
